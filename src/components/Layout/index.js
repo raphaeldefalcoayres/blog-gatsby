@@ -7,9 +7,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import Sidebar from '../Sidebar';
 
 const Layout = ({ children }) => (
-  <main>{children}</main>
+  <>
+    <aside><Sidebar /></aside>
+    <main>{children}</main>
+  </>
 );
 
 Layout.propTypes = {

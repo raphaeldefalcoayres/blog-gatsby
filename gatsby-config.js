@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Blog - Raphael de Falco Ayres',
+    subtitle: 'Compartilhando <b>conteúdos</b> sobre <b>Desevolvimento</b> e <b>Inovação</b>',
     description: 'Blog de tecnologia para compartilhar conhecimentos sobre desenvolvimento e inovação.',
-    author: '@raphaeldefalcoayres',
+    position: 'Full Stack Javascript Developer',
+    skills: 'NodeJS, ReactJS, React Native, PHP and others.',
+    author: 'Raphael de Falco Ayres',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -28,6 +31,18 @@ module.exports = {
       },
     },
     'gatsby-plugin-eslint',
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Nunito',
+            variants: ['300', '500', '600', '700'],
+          },
+        ],
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
