@@ -8,12 +8,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Sidebar from '../Sidebar';
+import { Container, Main, Aside } from './styles';
+import GlobalStyles from '../../styles/global';
 
 const Layout = ({ children }) => (
-  <>
-    <aside><Sidebar /></aside>
-    <main>{children}</main>
-  </>
+  <Container>
+    <GlobalStyles />
+    <Aside><Sidebar /></Aside>
+    <Main>{children}</Main>
+  </Container>
 );
 
 Layout.propTypes = {

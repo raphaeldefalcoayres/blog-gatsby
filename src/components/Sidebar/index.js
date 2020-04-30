@@ -1,12 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Avatar from '../Avatar';
+import {
+  Container, Top, Title, Subtitle, Bottom, Center, Details, Position, Skills, Buttons, Button,
+} from './styles';
 
 const Sidebar = () => {
   const {
     site: {
       siteMetadata: {
-        position, author, skills, subtitle,
+        position, skills, subtitle,
       },
     },
   } = useStaticQuery(graphql`
@@ -17,19 +20,39 @@ const Sidebar = () => {
           position
           skills
           author
+          subtitle
         }
       }
     }
   `);
 
   return (
-    <>
-      <Avatar />
-      <h1>{author}</h1>
-      <h2>{subtitle}</h2>
-      <h3>{position}</h3>
-      <h4>{skills}</h4>
-    </>
+    <Container>
+      <Top>
+        <Title>
+          <i>&lt;Blog&gt;</i>
+          <span>
+            Raphael
+            <strong>&gt;_</strong>
+          </span>
+        </Title>
+        <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
+
+
+      </Top>
+      <Center />
+      <Bottom>
+        <Avatar />
+        <Details>
+          <Position>{position}</Position>
+          <Skills>{skills}</Skills>
+          <Buttons>
+            <Button>Github link</Button>
+            <Button>Linkedin link</Button>
+          </Buttons>
+        </Details>
+      </Bottom>
+    </Container>
   );
 };
 
