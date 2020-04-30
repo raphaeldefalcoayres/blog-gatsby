@@ -1,5 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+
+import { Github, Linkedin } from '@styled-icons/boxicons-logos';
+
+
 import Avatar from '../Avatar';
 import {
   Container, Top, Title, Subtitle, Bottom, Center, Details, Position, Skills, Buttons, Button,
@@ -47,8 +51,16 @@ const Sidebar = () => {
           <Position>{position}</Position>
           <Skills>{skills}</Skills>
           <Buttons>
-            <Button>Github link</Button>
-            <Button>Linkedin link</Button>
+            <Button>
+              <Github />
+              {' '}
+              Github link
+            </Button>
+            <Button>
+              <Linkedin />
+              {' '}
+              Linkedin link
+            </Button>
           </Buttons>
         </Details>
       </Bottom>

@@ -92,13 +92,20 @@ export const Button = styled.button`
   cursor:pointer;
   border-radius:15px;
   border:none;
-  padding:2.5px 10px;
+  padding:5px 10px 5px 10px;
   margin-right:5px;
   background-clip:padding-box;
   position: relative;
   background:transparent;
   z-index:1;
-  display:block;
+  display:flex;
+  align-items:center;
+  font-size:13px;
+
+  svg{
+    width:18px;
+    margin-right:5px;
+  }
 
   &::before{
     content: "";
