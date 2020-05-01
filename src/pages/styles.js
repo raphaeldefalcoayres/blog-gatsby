@@ -8,4 +8,4 @@ export const H1 = styled.h1`
   padding:15px;
 `;
 
-export const PostsWrapper = styled.div`display:flex;flex-direction:column;`;
+export const PostsWrapper = styled.div`display:flex;flex-direction:column;flex:1;`;

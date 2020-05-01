@@ -1,12 +1,13 @@
 import React from 'react';
-import { File, TimeFive, ChevronRight } from '@styled-icons/boxicons-regular';
+import PropTypes from 'prop-types';
 
+import { File, TimeFive, ChevronRight } from '@styled-icons/boxicons-regular';
 import { graphql, useStaticQuery } from 'gatsby';
 import {
   Container, Category, Content, Date, Title,
 } from './styles';
 
-const Post = () => {
+const Post = ({ showPost }) => {
   const { pdf } = useStaticQuery(
     graphql`
     {
@@ -20,7 +21,7 @@ const Post = () => {
   );
 
   return (
-    <Container>
+    <Container showPost={showPost}>
 
       <Title>
         <Category>
@@ -44,4 +45,13 @@ const Post = () => {
   );
 };
 
+
 export default Post;
+
+Post.propTypes = {
+  showPost: PropTypes.bool,
+};
+
+Post.defaultProps = {
+  showPost: false,
+};

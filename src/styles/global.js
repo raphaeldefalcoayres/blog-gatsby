@@ -29,4 +29,5 @@ export default createGlobalStyle`
     letter-spacing:0.5px;
     color:#DDE8F4;
   }
-  `;
+
+`;

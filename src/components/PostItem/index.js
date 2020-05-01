@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { File, TimeFive } from '@styled-icons/boxicons-regular';
 
+import { File, TimeFive } from '@styled-icons/boxicons-regular';
 import { graphql, useStaticQuery } from 'gatsby';
 import {
   Container, Category, DataWrapper, ImageWrapper, Date, Title, Description,
 } from './styles';
 
-const PostItem = () => {
+const PostItem = ({ showPost, setShowPost }) => {
   const { avatarImage } = useStaticQuery(
     graphql`
     query{
@@ -22,8 +23,12 @@ const PostItem = () => {
   `,
   );
 
+  function handleShowPost() {
+    setShowPost(!showPost);
+  }
+
   return (
-    <Container>
+    <Container onClick={() => handleShowPost()}>
       <DataWrapper>
         <Category>
           <File />
@@ -31,11 +36,9 @@ const PostItem = () => {
         </Category>
         <Title>Meu ambiente de desenvolvimento Javascript</Title>
         <Description>
-          <span>
-            Neste manual você vai encontrar os principais programas e
-            configurações necessárias para iniciar o desevolvimento moderno de
-            aplicações com javascript.
-          </span>
+          Neste manual você vai encontrar os principais programas e
+          configurações necessárias para iniciar o desevolvimento moderno de
+          aplicações com javascript.
         </Description>
         <Date>
           <TimeFive />
@@ -50,3 +53,13 @@ const PostItem = () => {
 };
 
 export default PostItem;
+
+PostItem.propTypes = {
+  showPost: PropTypes.bool,
+  setShowPost: PropTypes.func,
+};
+
+PostItem.defaultProps = {
+  showPost: false,
+  setShowPost: false,
+};

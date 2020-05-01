@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.aside`
-  display:flex;
+  display:${(props) => (props.showPost ? 'flex' : 'none')};
   padding:15px;
   cursor:pointer;
   background:#0D243C;
   height:100vh;
-  width:125%;
-  display:flex;
+  width:60%;
   flex-direction:column;
 `;
 

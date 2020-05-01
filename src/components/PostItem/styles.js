@@ -4,6 +4,7 @@ export const Container = styled.section`
   display:flex;
   padding:15px;
   border-bottom:1px solid #13304F;
+  min-width:400px;
   cursor:pointer;
   &:hover{
     background:#0B1F33;
@@ -55,10 +56,8 @@ export const Description = styled.p`
   padding:0;
   margin:0;
   margin-bottom:5px;
-  span{
-    max-width:300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  `;
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+`;
