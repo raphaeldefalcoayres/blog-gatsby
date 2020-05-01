@@ -53,12 +53,10 @@ const Sidebar = () => {
           <Buttons>
             <Button>
               <Github />
-              {' '}
               Github link
             </Button>
             <Button>
               <Linkedin />
-              {' '}
               Linkedin link
             </Button>
           </Buttons>

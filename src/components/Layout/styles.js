@@ -7,7 +7,6 @@ export const Container = styled.section`
 export const Main = styled.main`
   width:100%;
   height:100vh;
-  padding:15px 15px;
   background:#0A1B2D;
 `;
 
