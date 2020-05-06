@@ -38,7 +38,7 @@ export const ImageWrapper = styled.div`
   justify-content:center;
   max-height:100%;
   min-width:190px;
-  margin-left:10px;
+  margin-left:auto;
 `;
 export const Date = styled.div`
   display:flex;

@@ -2,12 +2,14 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Github, Linkedin } from '@styled-icons/boxicons-logos';
-
+import { Search } from '@styled-icons/evil';
 
 import Avatar from '../Avatar';
 import {
-  Container, Top, Title, Subtitle, Bottom, Center, Details, Position, Skills, Buttons, Button,
+  Container, Top, Title, Subtitle, Bottom, Center, Details, Position, Skills,
+  Buttons, Button, InputSearch,
 } from './styles';
+import Tree from '../Tree';
 
 const Sidebar = () => {
   const {
@@ -41,10 +43,14 @@ const Sidebar = () => {
           </span>
         </Title>
         <Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-
-
       </Top>
-      <Center />
+      <Center>
+        <InputSearch>
+          <Search />
+          <input type="text" placeholder="Encontre um conteúdo..." />
+        </InputSearch>
+        <Tree />
+      </Center>
       <Bottom>
         <Avatar />
         <Details>

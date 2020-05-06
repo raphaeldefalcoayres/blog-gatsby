@@ -19,6 +19,9 @@ export const Top = styled.div`
 export const Center = styled.div`
   flex:1;
   display:flex;
+  padding:15px;
+  flex-direction:column;
+  justify-content:flex-start;
 `;
 export const Title = styled.h1`
   font-size:24px;
@@ -132,5 +135,26 @@ export const Button = styled.button`
     border-radius:15px;
 
   }
+
+`;
+
+export const InputSearch = styled.div`
+  display:flex;
+  position:relative;
+  align-items:center;
+  width:100%;
+  svg{
+    width:16px;
+    position:absolute;
+    margin-left:10px;
+  }
+  input{
+    border-radius:15px;
+    background:#030C14;
+    border:none;
+    padding:5px 10px 5px 30px;
+    width:100%;
+  }
+
 
 `;
